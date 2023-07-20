@@ -24,7 +24,6 @@ export default function Party(){
         });
     }, [id]);
       
-    console.log(data?.services.map(item => (item.name)))
 
     if (data === null) {
       return <div className="flex min-h-screen justify-center items-center">

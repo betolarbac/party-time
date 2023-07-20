@@ -1,7 +1,10 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
+import ButtonDeleted from "./components/button/ButtonDeleted";
 
 function App() {
+  const {id} = useParams();
 
+  console.log(!id)
   return (
     <>
       <div className="flex justify-evenly pt-2">
@@ -18,6 +21,8 @@ function App() {
           <button className="bg-violet-600 text-white p-2 rounded-md hover:opacity-90 font-semibold">
             Criar festa
           </button>
+
+          {id ? <ButtonDeleted /> : ""}
         </div>
       </div>
 

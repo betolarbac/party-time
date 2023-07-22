@@ -6,6 +6,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Party from './pages/party.jsx'
 import Home from './pages/Home.tsx'
+import CreateParty from './pages/CreateParty.tsx'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "party/:id",
         element: <Party />
+      },
+      {
+        path: "criarfesta",
+        element: <CreateParty />
       }
     ]
   },

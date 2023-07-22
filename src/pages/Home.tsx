@@ -28,13 +28,13 @@ export default function Home() {
         Festas Disponíveis
       </h1>
 
-      <div className="grid grid-cols-3 gap-10 justify-center px-36 ">
+      <div className="grid grid-cols-3 gap-10 justify-center px-36 sm:grid-cols-1 sm:px-2">
         {data.map(item => (
           <div className="max-w-lg p-4 shadow-lg rounded-lg" key={item._id}>
           <img
             src={item.image}
             alt=""
-            className="min-h-[350px] rounded-lg"
+            className="min-h-[350px] rounded-lg sm:min-h-[250px]"
           />
           <h2 className="text-center text-xl font-semibold uppercase mt-5">{item.title}</h2>
           <h2 className="text-base font-semibold uppercase mt-5">author: {item.author}</h2>

@@ -38,7 +38,7 @@ export default function Home() {
           />
           <h2 className="text-center text-xl font-semibold uppercase mt-5">{item.title}</h2>
           <h2 className="text-base font-semibold uppercase mt-5">author: {item.author}</h2>
-          <h2 className="text-base font-semibold uppercase mt-1">orçamento: {item.budget}</h2>
+          <h2 className="text-base font-semibold uppercase mt-1">orçamento: {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(parseInt(item.budget, 10))}</h2>
           <Link to={`party/${item._id}`}><button className="bg-violet-600 text-white p-2 mt-5 rounded-md hover:opacity-90 font-semibold">Destalhes</button></Link>
         </div>
         ))}

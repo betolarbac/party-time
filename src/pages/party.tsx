@@ -46,7 +46,7 @@ export default function Party() {
           autor: {data.author}
         </h2>
         <h2 className="text-base font-semibold uppercase mt-1">
-          orçamento: {data.budget}
+          orçamento: {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(parseInt(data.budget, 10))}
         </h2>
         <p className="">{data.description}</p>
 
@@ -55,7 +55,7 @@ export default function Party() {
             <div key={item._id} className="max-w-sm">
               <img src={item.image} alt="" className="rounded-lg" />
               <h3>{item.name}</h3>
-              <h3>Preço: {item.price}</h3>
+              <h3>Preço:{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.price)}</h3>
             </div>
           ))}
         </div>
